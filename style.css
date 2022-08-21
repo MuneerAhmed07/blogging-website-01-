@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --orange: rgb(255, 153, 7);
+    -background: rgb(249, 249, 255);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+::selection{
+    background: var(--orange);
+    color: #fff;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+}
+
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--orange);
+    border-radius: .5rem;
+}
+
+section{
+    padding: 2rem 9%;
+    padding-top: 0;
+}
+
+/* -------------------------------------------------- header section starts ------------------------  */
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.header .logo{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 4rem;
+    color: rgba(0,0,0,.9);
+    font-weight: bolder;
+    letter-spacing: .1rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: rgb(58, 65, 78);
+    font-weight: bold;
+    margin: 0 .5rem;
+    padding: 1rem;
+}
+
+.header .navbar a:first-child{
+    color: var(--orange);
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+}
+
+.header #menu-btn{
+    font-size: 2.5rem;
+    color: var(--orange);
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    background: #fafafa;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    transition: transform .3s linear;
+    display: none;
+}
+
+.header #menu-btn:hover {
+    transform: rotate(360deg);
+}
+
+.header .icons a{
+    font-size: 1.7rem;
+    color: var(--orange);
+    margin: .5rem;
+    padding: 1rem;
+    background: #fafafa;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header .icons a:hover{
+    transform: scale(1.1);
+    color: #fff;
+    background: var(--orange);
+}
+
+.header.active{
+    padding: 1.5rem 9%;
+    background: linear-gradient(rgba(255,255,255,.9), rgba(255,255,255,.9));
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+.header.active .logo{
+    padding-left: .5rem;
+}
+
+
+
+/* -------------------------------------------------- header section ends ------------------------  */
+
+/* -------------------------------------------------- home section starts -------------------------  */
+
+.home .box{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.home .box .content{
+    text-align: center;
+    max-width: 60rem;
+}
+
+.home .box .content span{
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.home .box .content h1{
+    font-size: 4rem;
+    color: #fff;
+    padding: .5rem 0;
+}
+
+.home .box .content p{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: normal;
+    padding-top: 1rem;
+}
+
+/* -------------------------------------------------- home section ends -------------------------  */
+
+/* -------------------------------------------- fashion section starts ---------------------  */
+
+.fashion .fashion-slider .box{
+    position: relative;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.fashion .fashion-slider .box .image{
+    height: 20rem;
+    width: 100%;
+}
+
+.fashion .fashion-slider .box .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.fashion .fashion-slider .box .content{
+    padding: 2rem 0;
+}
+
+.fashion .fashion-slider .box  .content .btn{
+    background: #222;
+    color: var(--orange);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding: .5rem 3.5rem;
+    cursor: pointer;
+}
+
+.fashion .fashion-slider .box  .content h3{
+    font-size: 1.8rem;
+    color: rgba(0,0,0,.8);
+    font-weight: bold;
+    padding: 1.8rem 0;
+}
+
+.fashion .fashion-slider .box  .content p{
+    font-size: 1.4rem;
+    color: #808080;
+    text-transform: none;
+}
+
+
+/* -------------------------------------------- fashion section ends ---------------------  */
+
+/* -------------------------------------------- posts section starts -----------------------  */
+
+.post .box-container{
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: 3.5fr 1.5fr;
+    gap: 2rem;
+}
+
+.post .box-container .left-col .box{
+    margin-bottom: 5rem;
+    padding: 0 1rem;
+    width: 100%;
+}
+
+.post .box-container .left-col .box .image{
+    position: relative;
+}
+
+.post .box-container .left-col .box .image  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post .box-container .left-col .box .icons{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    padding: 2rem;
+}
+
+.post .box-container .left-col .box .icons a{
+    font-size: 1.4rem;
+    color: #808080;
+    margin: 0 1rem;
+}
+
+.post .box-container .left-col .box .icons a i{
+    color: var(--orange);
+    margin-right: 1rem;
+}
+
+.post .box-container .left-col .box .content{
+    padding: 2rem 0;
+}
+
+.post .box-container .left-col .box .content h3{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: initial;
+    color: #808080;
+    padding-bottom: 1rem;
+}
+
+.post .box-container .left-col .box .content span{
+    font-size: 1.5rem;
+    color: #808080;
+    text-transform: initial;
+}
+
+.post .box-container .left-col .box .content p{
+    padding-top: 1.5rem;
+    font-size: 1.3rem;
+    color: #808080;
+    line-height: 1.8;
+}
+
+.post .box-container .left-col .box .btn{
+    background: #222;
+    font-size: 1.3rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    font-weight: normal;
+    padding: 1.5rem 3.5rem;
+    cursor: pointer;
+}
+
+.post .box-container .left-col .box .btn i{
+    margin-left: 1rem;
+}
+
+.post .box-container .left-col .box .btn:hover{
+    background: var(--orange);
+    color: #222;
+    transition: .2s linear;
+}
+
+.post .box-container .left-col .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post .box-container .left-col .button a{
+    font-size: 1.5rem;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    color: #222;
+    border: .2rem solid #eee;
+    margin: 0 .5rem;
+}
+
+.post .box-container .left-col .button a:nth-child(2){
+    color: var(--orange);
+    border-color: #000;
+}
+
+.post .box-container .left-col .button a:hover{
+    border-color: #000;
+    color: var(--orange);
+}
+
+/* for right-col  */
+
+.post .box-container .right-col .box{
+    background: #f9f9ff;
+    padding: 3rem 2.5rem;
+    border-radius: .5rem;
+    margin-bottom: 3rem;
+}
+
+.post .box-container .right-col .box .heading{
+    font-size: 2rem;
+    color: #3a414e;
+    line-height: 1.3;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 100;
+}
+
+.post .box-container .right-col .box .heading::before{
+    content: "";
+    display: block;
+    width: 20%;
+    height: 5px;
+    background: #ff9907;
+    position: absolute;
+    bottom: 2.4rem;
+    z-index: -1;
+}
+
+.post .box-container .right-col .box .inputBox input{
+    display: block;
+    width: 100%;
+    margin: 1.5rem 0;
+    padding: 1.3rem 2rem;
+    border: .1rem solid #eee;
+    text-transform: initial;
+}
+
+.post .box-container .right-col .box .inputBox .btn{
+    background: #222;
+    border: none;
+    color: var(--orange);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.post .box-container .right-col .box .inputBox .btn:hover{
+    background: #333;
+}
+
+.post .box-container .right-col .box .content a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding: 1.3rem;
+    background: #fff;
+    color: #333;
+    font-size: 1.3rem;
+}
+
+.post .box-container .right-col .box .content a:hover{
+    color: var(--orange);
+    box-shadow: 0 .5rem 1rem #eee;
+}
+
+.post .box-container .right-col .box .image{
+    position: relative;
+}
+
+.post .box-container .right-col .box .image .content{
+    position: absolute;
+    bottom: 0;
+    background: #fff;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.post .box-container .right-col .box .image .content span{
+    padding-left: .5rem;
+    border-left: .3rem solid #eee;
+}
+
+.post .box-container .right-col .box .box-1 h3{
+    padding: 2.5rem 0;
+    color: #222;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: 1.8;
+    cursor: pointer;
+}
+
+.post .box-container .right-col .box .box-1 h3:hover{
+    color: var(--orange);
+}
+
+.post .box-container .right-col .popular .icons a{
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    background: #fff;
+    margin: .5rem;
+    font-size: 1.3rem;
+    color: #808080;
+    border-radius: .5rem;
+}
+
+.post .box-container .right-col .popular a:hover{
+    background: #222;
+    color: var(--orange);
+}
+
+/* -------------------------------------------- posts section ends -----------------------  */
+
+/* -------------------------------------- footer section starts -----------------------------  */
+
+.footer{
+    background: #000;
+    margin-top: 7rem;
+    padding: 5rem 5%;
+}
+
+.footer .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .box-container .box{
+    padding: 2rem 1rem;
+}
+
+.footer .box-container .box .heading{
+    font-size: 2rem;
+    color: #fff;
+    letter-spacing: .1rem;
+    padding: 2rem 0;
+}
+
+.footer .box-container .box p{
+    font-size: 1.3rem;
+    color: #808080;
+    line-height: 1.8;
+}
+
+.footer .box-container .box .inputBox p{
+    font-size: 1.3rem;
+    color: #808080;
+    padding-bottom: 1.5rem;
+}
+
+.footer .box-container .box .inputBox input{
+    padding: .8rem 1.5rem;
+    background: #222;
+    width: 80%;
+    font-size: 1.3rem;
+    color: #808080;
+    text-transform: initial;
+}
+
+.footer .box-container .box .inputBox .btn{
+    background: var(--orange);
+    font-size: 1.3rem;
+    color: #222;
+    padding: .8rem 1.5rem;
+    cursor: pointer;
+}
+
+.footer .box-container .box .icons p{
+    font-size: 1.3rem;
+    color: #808080;
+    padding-bottom: 1rem;
+}
+
+.footer .box-container .box .icons a{
+    font-size: 2rem;
+    color: #333;
+    padding: .8rem;
+}
+
+.footer .box-container .box .icons a:hover{
+    color: var(--orange);
+}
+
+.footer .credit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #808080;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    border-top: .1rem solid #333;
+    font-size: 2rem;
+}
+
+.footer .credit span{
+    color: var(--orange);
+    margin: 0 .5rem;
+}
+
+/* -------------------------------------- footer section ends -----------------------------  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------- media queries section ----------------------------  */
+
+@media (max-width: 991px){
+    
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    .header.active{
+        padding: 2rem;
+    }
+
+    section{
+        padding-top: 0 !important;
+        padding: 2rem;
+    }
+
+}
+
+
+/* ------------------ for max-width 768px ------------  */
+
+@media (max-width: 768px){
+
+    .header #menu-btn{
+        display: inline-block;
+    }
+
+    .header.active #menu-btn{
+        margin-right: .5rem;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: 0;
+        left: 0;
+        background: #fafafa;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .header .navbar a{
+        display: block;
+        margin: 1.5rem;
+        padding: 1.2rem;
+        background: #fff;
+        border-radius: .5rem;
+        box-shadow: 0rem .5rem 1rem rgba(0,0,0,.1);
+        border-left: .3rem solid var(--orange);
+    }
+
+    .header .navbar.active{
+        clip-path: polygon(0 0,100% 0, 100% 100%, 0 100%);
+    }
+
+    .post .box-container{
+        grid-template-columns: 1fr;
+    }
+
+    .post .box-container .right-col .box .heading::before{
+        width: 10%;
+    }
+
+    .post .box-container .right-col .box{
+        margin-top: 3rem;
+    }
+
+}
+
+/* ------------------ for max-width 450px ------------  */
+
+@media (max-width: 450px){
+    
+    html{
+        font-size: 50%;
+    }
+
+    .header .icons{
+        display: none;
+    }
+
+    .post .box-container .left-col .box .icons{
+        bottom: -10%;
+    }
+
+    .post .box-container .right-col .box .heading::before{
+        width: 15%;
+    }
+
+    .post .box-container .right-col .box .image{
+        width: 100%;
+    }
+
+    .post .box-container .right-col .box .image img{
+        width: 100%;
+    }
+
+}
